@@ -1,0 +1,12 @@
+{
+  "name": "hostapp",
+  "version": "1.0.0",
+  "description": "this is host tool",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "txtyspring@gmail.com",
+  "license": "ISC"
+}
