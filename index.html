@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="table-responsive content-table">
+        <table class="table">
+            <caption>HOST管理工具</caption>
+            <thead>
+                <tr>
+                    <th>状态</th>
+                    <th>域名</th>
+                    <th>IP</th>
+                    <th>使用</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" value="baidu.com">
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" value="127.0.0.1">
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success">成功按钮</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button id="load">load</button>
+</body>
+<script type='text/javascript'>
+    var fs = require('fs');
+    document.getElementById('load').onclick = function () {
+        fs.readFile(`${__dirname}/package.json`, 'utf8', function (err, data) {
+            console.log(err);
+            console.log(data);
+        });
+    }
+</script>
+
+</html>
